@@ -22,7 +22,12 @@ class pr001{
 		//Вещественные типы
 		float f;  //32 бит
 		double dd; //64 бит
-		
+		dd = 1.5;
+		intg = (int)dd;
+		intg = 10/3;
+		f = intg;
+		System.out.println(intg + " " + dd);
+
 		//Символьный тип данных
 		char ch; //16 бит
 		ch = 'A';
@@ -32,12 +37,14 @@ class pr001{
 		for (int i=0; i <=65; i++){
 			System.out.print(ch++ + " ");
 		}
-		System.out.ptintln();
+		System.out.println();
 		//Логический тип
-		boolean bool; //1 бит
+		boolean bool, bool1 = false; //1 бит
 		bool = true;
-		bool = false;
-		
+		System.out.println(!bool);
+		System.out.print(bool & bool1);
+		System.out.print(bool | bool1);
+
 
 	}
 }
