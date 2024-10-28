@@ -2,6 +2,11 @@ class Cars{
     int pass; //пасажиры
     int volume; //емкость бака
     double fuel; //расход топлива на 100
+    Cars(int p,int v,double f){   //конструктор
+        pass = p;
+        volume = v;
+        fuel = f;
+    }
     void range(){
         System.out.println("Проедет на полном баке: " + (volume/fuel*100) + " км");
     }
@@ -16,19 +21,14 @@ class Cars{
 class pr003{
     public static void main(String[] args){
         double range;
-        Cars Honda = new Cars();
-        Honda.pass = 2;
-        Honda.volume = 55;
-        Honda.fuel = 20.0;
-        Cars BMW = new Cars();
-        BMW.pass = 5; 
-        BMW.volume = 40;
-        BMW.fuel = 15.5;
+        Cars Honda = new Cars(2,55,20.0);
+        Cars BMW = new Cars(5,40,15.5);
 
         System.out.println("Параметры Хонды:");
         System.out.println("Колличество пассажиоров: " + Honda.pass);
         System.out.println("Обьем бака: " + Honda.volume + " | Расход топлива: " + Honda.fuel);
         Honda.range();
+        
         
         System.out.println("----------------------------------------------------------------");
 
@@ -36,6 +36,6 @@ class pr003{
         System.out.println("Колличество пассажиоров: " + BMW.pass);
         System.out.println("Обьем бака: " + BMW.volume + " | Расход топлива: " + BMW.fuel);
         System.out.println("Проедет на полном баке: " + BMW.range2() + " км");
-        System.out.println("Проедет на 13 литров: " + BMW.range3(13) + " км");
+        System.out.println("Проедет на 15 литров: " + BMW.range3(13) + " км");
     }
 }
