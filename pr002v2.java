@@ -85,5 +85,36 @@ three:          {
         System.out.println("После блока 1");
         }
         System.out.println("После цикла for");
+
+
+        System.out.println();
+done:
+        for(int i=0; i<10; i++){
+            for(int j=0;j<10;j++){
+                for(int k=0;k<10;k++){
+                    System.out.println(k + " ");
+                    if(k == 5) break done;
+                }
+                System.out.println("После цикла k");
+            }
+            System.out.println("После цикла j");
+        }
+        System.out.println("После цикла i");
+        System.out.println();
+
+        for(int i=0;i<100;i++){
+            if((i%2)!=0)
+                continue;
+            System.out.println(i);
+        }
+outerloop:
+            for(int i=1;i<10;i++){
+                System.out.print("\nПроход внешнего цикла №" + i + ", внутренний цикл: ");
+                for(int j=1;j<10;j++){
+                    if(j==5) continue outerloop;
+                    System.out.println(j);
+                }
+            }
+            System.out.println();
     }   
 }
